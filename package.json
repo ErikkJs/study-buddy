@@ -1,9 +1,11 @@
 {
-  "name": "openailabs",
+  "name": "studyBuddy",
   "private": true,
   "sideEffects": false,
   "type": "module",
   "scripts": {
+    "build:css": "npx postcss app/tailwind.css -o app/output.css",
+    "watch:css": "npx postcss app/tailwind.css -o app/output.css --watch",
     "build": "remix vite:build",
     "dev": "remix vite:dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
@@ -11,12 +13,29 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@clerk/remix": "^4.1.2",
+    "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-progress": "^1.1.0",
+    "@radix-ui/react-select": "^2.1.1",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-toast": "^1.2.1",
     "@remix-run/node": "^2.9.2",
     "@remix-run/react": "^2.9.2",
     "@remix-run/serve": "^2.9.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "convex": "^1.13.0",
     "isbot": "^4.1.0",
+    "lucide-react": "^0.396.0",
+    "openai": "^4.52.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.52.0",
+    "remix-hook-form": "^5.0.1",
+    "svix": "^1.24.0",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.9.2",
@@ -34,8 +53,8 @@
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.1.6",
-    "vite": "^5.1.0",
-    "vite-tsconfig-paths": "^4.2.1"
+    "vite": "^5.3.1",
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "engines": {
     "node": ">=20.0.0"
